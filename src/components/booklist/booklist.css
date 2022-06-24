@@ -1,0 +1,157 @@
+.booklist {
+  width: 100%;
+  min-height: 30rem;
+  margin: 2rem 0;
+}
+
+.booklist__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.booklist__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.booklist__content {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.booklist__content > :nth-child(1) {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.booklist__item {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  width: 100%;
+}
+
+.booklist__item > span {
+  text-align: center;
+  grid-column: 1 / span 4;
+}
+
+.book__card {
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: var(--color-bg-variant);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.6);
+  transition: var(--transition);
+}
+
+.book__card:hover {
+  transform: scale(1.01);
+  box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.6);
+}
+
+.book__header {
+  background-color: var(--color-primary-variant);
+  position: relative;
+}
+
+.book__header > .icon {
+  position: absolute;
+  cursor: pointer;
+}
+
+.book__header > .icon:nth-of-type(1) {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.book__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.book__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  position: relative;
+}
+
+@keyframes animateMenu {
+  0% {
+    transform: translate(2rem, 4rem) scale(0);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.book__menu {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  min-width: 6rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -4.5rem;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.6);
+  animation: animateMenu 300ms linear forwards;
+}
+
+.book__menu .book__menu-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  place-items: center;
+  padding: 0 0.5rem;
+  height: 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border: none;
+}
+
+.active-menu {
+  display: flex;
+}
+
+.book__menu .book__menu-item:hover {
+  background-color: var(--color-primary-variant);
+  cursor: pointer;
+}
+
+.book__author {
+  color: var(--color-primary);
+}
+
+.full-heigth {
+  width: 100%;
+  height: 100%;
+}
+
+.book__action {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+  position: relative;
+}
+
+.book__action > .icon {
+  cursor: pointer;
+}

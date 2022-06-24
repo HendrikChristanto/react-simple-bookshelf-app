@@ -1,0 +1,91 @@
+.modal__wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.active-modal {
+  display: block;
+}
+
+.modal__backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes animateModalBox {
+  from {
+    transform: translate(-50%, -150%) scale(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25rem;
+  max-width: 85%;
+  background: var(--color-bg);
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.6);
+  animation: animateModalBox 400ms linear forwards;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+}
+
+.modal__form {
+  padding: 0 2rem 2rem;
+}
+
+.modal__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal__form .input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__form .input-form :nth-child(1) {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.modal__form .input-form :nth-child(2) {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-bg-variant);
+  color: var(--color-white);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.6);
+}
+
+.modal__form .input-form :nth-child(2)::placeholder {
+  color: var(--color-light);
+}
+
+.modal__form .action-form {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}

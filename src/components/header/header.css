@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  height: 7.5rem;
+  background-color: transparent;
+}
+
+.header__container {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__profile {
+  width: 3rem;
+  border-radius: 100rem;
+  overflow: hidden;
+}
+
+.header__profile:hover {
+  cursor: pointer;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+/* ===== MEDIA QUERIES (SMALL) ===== */
+@media screen and (max-width: 600px) {
+  .header__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .header__profile {
+    width: 2.5rem;
+  }
+}
