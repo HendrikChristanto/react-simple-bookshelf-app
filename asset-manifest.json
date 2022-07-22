@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-simple-bookshelf-app/static/css/main.0008e2dd.css",
+    "main.js": "/react-simple-bookshelf-app/static/js/main.623e6634.js",
+    "static/media/cover.png": "/react-simple-bookshelf-app/static/media/cover.9ed4594dbe2112022ad7.png",
+    "static/media/me.png": "/react-simple-bookshelf-app/static/media/me.13794b3edc5c3e2165eb.png",
+    "index.html": "/react-simple-bookshelf-app/index.html",
+    "main.0008e2dd.css.map": "/react-simple-bookshelf-app/static/css/main.0008e2dd.css.map",
+    "main.623e6634.js.map": "/react-simple-bookshelf-app/static/js/main.623e6634.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0008e2dd.css",
+    "static/js/main.623e6634.js"
+  ]
+}
